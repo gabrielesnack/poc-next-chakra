@@ -1,17 +1,21 @@
 import { Box } from '@chakra-ui/react'
+import Image from 'next/image'
 import { coverProps } from './types'
 
-const Cover = ({ children, ...rest }: coverProps) => {
+const Cover = ({ children, img, px, ...rest }: coverProps) => {
   return (
-    <Box
-      d="flex"
-      w="100vw"
-      h="45vh"
-      bgPosition="50% 10%"
-      bgSize="cover"
-      {...rest}
-    >
-      {children}
+    <Box pos="relative" d="flex" w="100vw" h="45vh" bgSize="cover" {...rest}>
+      <Image
+        src={img}
+        alt="Banner"
+        layout="fill"
+        objectFit="cover"
+        objectPosition="50% 10%"
+        quality="100%"
+      ></Image>
+      <Box pos="absolute" d="flex" w="100vw" h="45vh" px={px} {...rest}>
+        {children}
+      </Box>
     </Box>
   )
 }

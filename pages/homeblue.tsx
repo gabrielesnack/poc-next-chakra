@@ -1,7 +1,7 @@
 import { Box, Text, Image, Grid, Heading, Badge } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import { generateRandomKey } from '@/utils'
-import Layout from '@/components/layouts/default'
+import Layout from '@/components/layouts/blue'
 import Cover from '@/components/banners/cover'
 import JobCard from '@/components/cards/JobCard'
 import CourseCard from '@/components/cards/CourseCard'
@@ -17,7 +17,7 @@ interface IHomeProps {
   jobsPopular: IJob
 }
 
-const Home = ({ jobsSuggested, jobsPopular }: IHomeProps) => {
+const HomeBlue = ({ jobsSuggested, jobsPopular }: IHomeProps) => {
   const [cities, setCities] = useState([])
 
   useEffect(() => {
@@ -233,4 +233,4 @@ export async function getStaticProps() {
   }
 }
 
-export default Home
+export default HomeBlue

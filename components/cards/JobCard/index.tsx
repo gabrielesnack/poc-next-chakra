@@ -23,8 +23,8 @@ const JobCard = ({
         right="1rem"
         top="1rem"
       >
-        <CIcon w="4" size="lg" icon={['far', 'heart']} />
-        <CIcon w="4" size="lg" icon={['fas', 'share']} />
+        <CIcon w="4" color="primary" size="lg" icon={['far', 'heart']} />
+        <CIcon w="4" color="primary" size="lg" icon={['fas', 'share']} />
       </Box>
 
       <Text as="h3" fontSize="md">
