@@ -23,8 +23,8 @@ const TestimonialFeed = () => {
         mb="4"
         mr="4"
         size="xl"
-        name="Vanessa Porto"
-        src="img/testimonialsfeed/foto_gabriel_burh.jpg"
+        name="Gabriel Esnack"
+        src="img/testimonialsfeed/foto_gabriel_burh.png"
       />
       <Box as="div">
         <Text as="p" fontSize="sm" fontWeight="400" mb="4">
