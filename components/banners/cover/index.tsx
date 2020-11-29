@@ -11,7 +11,7 @@ const Cover = ({ children, img, px, ...rest }: coverProps) => {
         layout="fill"
         objectFit="cover"
         objectPosition="50% 10%"
-        quality="100%"
+        quality="70%"
       ></Image>
       <Box pos="absolute" d="flex" w="100vw" h="45vh" px={px} {...rest}>
         {children}
