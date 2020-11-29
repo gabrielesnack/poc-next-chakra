@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import { Box, Heading } from '@chakra-ui/react' 
+import Head from "next/head";
+import { Box, Heading } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -10,12 +10,12 @@ export default function Home() {
       </Head>
 
       <Box as="main">
-        <Heading as="h1" size="2xl">Wellcome to next.js with chakra-ui and typescript</Heading>
+        <Heading as="h1" size="2xl">
+          Wellcome to next.js with chakra-ui and typescript
+        </Heading>
       </Box>
 
-      <Box as="footer">
-        Footer
-      </Box>  
+      <Box as="footer">Footer</Box>
     </Box>
-  )
+  );
 }
