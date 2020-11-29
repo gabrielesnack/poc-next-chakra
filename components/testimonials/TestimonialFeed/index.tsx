@@ -24,7 +24,7 @@ const TestimonialFeed = () => {
         mr="4"
         size="xl"
         name="Vanessa Porto"
-        src="img/testimonialsfeed/foto_vanessa_porto.jpg"
+        src="img/testimonialsfeed/foto_gabriel_burh.jpg"
       />
       <Box as="div">
         <Text as="p" fontSize="sm" fontWeight="400" mb="4">
@@ -33,11 +33,11 @@ const TestimonialFeed = () => {
           aprender usar e sempre atualizada.
         </Text>
         <Text as="h4" fontSize="md" fontWeight="600">
-          Vanessa Porto Dusik
+          Gabriel Esnack
           {stars()}
         </Text>
         <Text as="h4" fontSize="sm" fontWeight="400">
-          Supervisora de Vendas.
+          Desenvolvedor FrontEnd
         </Text>
       </Box>
     </Box>
