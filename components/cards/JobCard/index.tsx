@@ -1,5 +1,6 @@
 import { Box, Avatar, Text } from '@chakra-ui/react'
 import { propsJobCard } from './types'
+import CIcon from '@/components/custom/CIcon'
 
 const JobCard = ({
   avatar,
@@ -21,7 +22,10 @@ const JobCard = ({
         p="1rem"
         right="1rem"
         top="1rem"
-      ></Box>
+      >
+        <CIcon w="4" size="lg" icon={['far', 'heart']} />
+        <CIcon w="4" size="lg" icon={['fas', 'share']} />
+      </Box>
 
       <Text as="h3" fontSize="md">
         {companyName}
