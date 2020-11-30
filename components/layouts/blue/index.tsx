@@ -7,6 +7,7 @@ import UserNavbar from '@/components/navbars/UserNavbar'
 const theme = extendTheme({
   colors: {
     primary: '#1da1f1',
+    black: '#1da1f1',
     gray: {
       200: '#1da1f1',
     },
