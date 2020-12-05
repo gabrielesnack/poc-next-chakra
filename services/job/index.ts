@@ -1,4 +1,5 @@
 import { suggestedJob } from './suggestedJob'
 import { suggestedJobPopular } from './suggestedJobPopular'
+import { IJob } from './types'
 
-export { suggestedJob, suggestedJobPopular }
+export { suggestedJob, suggestedJobPopular, IJob }

@@ -7,7 +7,7 @@ import {
   Courses,
   ExploreCities,
   Testimonial,
-} from '@/modules/Home'
+} from '@/modules/home'
 import { suggestedJob, suggestedJobPopular } from '@/services/job'
 import { IJob } from '@/services/job/types'
 interface IHomeProps {

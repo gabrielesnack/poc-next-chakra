@@ -1,4 +1,4 @@
-import { IJob } from '@/services/job/types'
+import { IJob } from '@/services/job/'
 
 export interface jobProps {
   title: string

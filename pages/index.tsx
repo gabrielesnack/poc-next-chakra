@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Box } from '@chakra-ui/react'
 import Layout from '@/components/layouts/default'
 import Cover from '@/components/banners/cover'
@@ -7,15 +8,31 @@ import {
   Courses,
   ExploreCities,
   Testimonial,
-} from '@/modules/Home'
-import { suggestedJob, suggestedJobPopular } from '@/services/job'
-import { IJob } from '@/services/job/types'
+} from '@/modules/home'
+
+import { useUser } from '@/context/user'
+import { suggestedJob, suggestedJobPopular, IJob } from '@/services/job'
+import { useApi } from '@/hooks'
 interface IHomeProps {
   jobsSuggested: Array<IJob>
   jobsPopular: Array<IJob>
 }
 
 const Home = ({ jobsSuggested, jobsPopular }: IHomeProps) => {
+  const { user, setUser } = useUser()
+  const response = useApi('http://localhost:3000/api/users')
+
+  useEffect(() => {
+    console.log(response)
+    if (response.status == 'done') {
+      setUser(response['1'])
+    }
+  }, [response])
+
+  useEffect(() => {
+    console.log(user)
+  }, [user])
+
   return (
     <Layout>
       <Box>
