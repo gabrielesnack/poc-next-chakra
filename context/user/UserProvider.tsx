@@ -1,15 +1,17 @@
-import UserContext from './index'
 import { useEffect, useState } from 'react'
+import UserContext from './index'
 import { IUser, IUserProvider } from './types'
 import { getUser } from '@/services/user'
 
 const UserProvider = ({ children }: IUserProvider) => {
-  const [user, setUser] = useState<IUser | null>({} as IUser)
+  const [user, setUser] = useState<IUser | null>(null)
 
   useEffect(() => {
-    getUser().then((res) => {
-      setUser(res)
-    })
+    getUser()
+      .then((res) => {
+        setUser(res)
+      })
+      .catch((err) => {})
   }, [])
 
   return (

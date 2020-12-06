@@ -3,7 +3,7 @@ import users from '@/mock/users'
 
 export default (req, res) => {
   if (req.method == 'POST') {
-    const params = JSON.parse(req.body)
+    const params = req.body
     setTimeout(() => {
       const user = findUser(params)
 

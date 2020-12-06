@@ -8,7 +8,7 @@ const ExploreCities = () => {
   const [cities, setCities] = useState([])
 
   useEffect(() => {
-    getCityByJob(15).then((res) => {
+    getCityByJob().then((res) => {
       setCities(res)
     })
   }, [])

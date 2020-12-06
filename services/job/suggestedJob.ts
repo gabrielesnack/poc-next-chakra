@@ -1,9 +1,10 @@
-export async function suggestedJob(city = 'sorocaba') {
+import axios from 'axios'
+
+export async function suggestedJob(job = 'recent') {
   try {
-    const url = process.env.api.job.getJobsSuggested.replace(':city', city)
-    const data = await fetch(url)
-    const dataJson = await data.json()
-    return dataJson.data
+    const url = process.env.api.job.getJobs.replace(':job', job)
+    const { data } = await axios(url)
+    return data.data
   } catch (error) {
     return []
   }

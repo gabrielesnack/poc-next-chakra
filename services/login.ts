@@ -1,15 +1,17 @@
+import axios from 'axios'
+
 export async function login({ email, password }) {
   try {
     const url = process.env.api.login
 
-    const data = await fetch(url, {
-      method: 'POST',
-      body: JSON.stringify({ email, password }),
+    const { data } = await axios.post(url, {
+      email,
+      password,
     })
-    const dataJson = await data.json()
-    return dataJson.data
+
+    return data.data
   } catch (error) {
-    return {}
+    throw error
   }
 }
 

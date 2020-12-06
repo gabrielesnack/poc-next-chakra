@@ -1,12 +1,10 @@
-import https from 'https'
+import axios from 'axios'
 
-export async function getCityByJob(number: number) {
+export async function getCityByJob() {
   try {
-    const url = process.env.api.job.getCityByJob.replace(':number', number)
-
-    const data = await fetch(url)
-    const dataJson = await data.json()
-    return dataJson.data
+    const url = process.env.api.job.getCityByJob
+    const { data } = await axios(url)
+    return data.data
   } catch (error) {
     return []
   }

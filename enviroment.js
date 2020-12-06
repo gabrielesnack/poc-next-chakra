@@ -9,9 +9,8 @@ const env = () => {
   }
 
   const job = {
-    getJobsSuggested: `${baseApiUrl}nb/user/feed/jobs/suggested/:city`,
-    getJobsPopular: `${baseApiUrl}nb/user/feed/jobs/suggested/popular/:city`,
-    getCityByJob: `${baseApiUrlV2}search/cities?type=jobs&take=:number`,
+    getJobs: `${localApi}jobs/:job`,
+    getCityByJob: `${localApi}cities`,
   }
 
   const login = `${localApi}login`
