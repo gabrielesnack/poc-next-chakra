@@ -1,4 +1,4 @@
-const { baseApiUrl, baseApiUrlV2 } =
+const { baseApiUrl, baseApiUrlV2, localApi } =
   process.env.NODE_ENV !== 'production'
     ? require('./development.env.js')
     : require('./production.env.js')
@@ -10,9 +10,12 @@ const env = () => {
     getCityByJob: `${baseApiUrlV2}search/cities?type=jobs&take=:number`,
   }
 
+  const login = `${localApi}login`
+
   return {
     api: {
       job,
+      login,
     },
   }
 }

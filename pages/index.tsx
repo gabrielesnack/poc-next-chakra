@@ -12,7 +12,6 @@ import {
 
 import { useUser } from '@/context/user'
 import { suggestedJob, suggestedJobPopular, IJob } from '@/services/job'
-import { useApi } from '@/hooks'
 interface IHomeProps {
   jobsSuggested: Array<IJob>
   jobsPopular: Array<IJob>
@@ -20,14 +19,6 @@ interface IHomeProps {
 
 const Home = ({ jobsSuggested, jobsPopular }: IHomeProps) => {
   const { user, setUser } = useUser()
-  const response = useApi('http://localhost:3000/api/users')
-
-  useEffect(() => {
-    console.log(response)
-    if (response.status == 'done') {
-      setUser(response['1'])
-    }
-  }, [response])
 
   useEffect(() => {
     console.log(user)
