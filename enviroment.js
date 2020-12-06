@@ -4,6 +4,10 @@ const { baseApiUrl, baseApiUrlV2, localApi } =
     : require('./production.env.js')
 
 const env = () => {
+  const user = {
+    getUser: `${localApi}user`,
+  }
+
   const job = {
     getJobsSuggested: `${baseApiUrl}nb/user/feed/jobs/suggested/:city`,
     getJobsPopular: `${baseApiUrl}nb/user/feed/jobs/suggested/popular/:city`,
@@ -11,11 +15,14 @@ const env = () => {
   }
 
   const login = `${localApi}login`
+  const logout = `${localApi}logout`
 
   return {
     api: {
+      user,
       job,
       login,
+      logout,
     },
   }
 }

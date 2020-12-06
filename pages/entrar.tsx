@@ -2,15 +2,18 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { Box, Flex, Input, Button, Text } from '@chakra-ui/react'
 import login from '@/services/login'
+import { useUser } from '@/context/user'
 
 const Entrar = () => {
   const router = useRouter()
+  const { user, setUser } = useUser()
   const [email, setEmail] = useState(null)
   const [password, setPass] = useState(null)
 
   const handleLogin = async () => {
     const res = await login({ email, password })
     if (!res.error) {
+      setUser(res)
       router.push('/')
     }
   }

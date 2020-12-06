@@ -7,7 +7,7 @@ export async function login({ email, password }) {
       body: JSON.stringify({ email, password }),
     })
     const dataJson = await data.json()
-    return dataJson
+    return dataJson.data
   } catch (error) {
     return {}
   }

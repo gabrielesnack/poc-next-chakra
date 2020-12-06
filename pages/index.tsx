@@ -18,11 +18,11 @@ interface IHomeProps {
 }
 
 const Home = ({ jobsSuggested, jobsPopular }: IHomeProps) => {
-  // const { user, setUser } = useUser()
+  const { user } = useUser()
 
-  // useEffect(() => {
-  //   console.log(user)
-  // }, [user])
+  useEffect(() => {
+    console.log(user)
+  }, [user])
 
   return (
     <Layout>
