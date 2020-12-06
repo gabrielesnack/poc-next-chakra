@@ -2,6 +2,7 @@ import cookie from 'cookie'
 
 export default (req, res) => {
   if (req.method == 'POST') {
+    const params = JSON.parse(req.body)
     setTimeout(() => {
       res.statusCode = 200
       res.setHeader(
@@ -13,7 +14,7 @@ export default (req, res) => {
       )
       res.json({
         error: false,
-        data: { ...req.body.email },
+        data: { ...params },
       })
     }, 2000)
   } else {

@@ -10,7 +10,6 @@ const Entrar = () => {
 
   const handleLogin = async () => {
     const res = await login({ email, password })
-    console.log(res)
     if (!res.error) {
       router.push('/')
     }
