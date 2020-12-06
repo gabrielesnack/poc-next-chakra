@@ -5,8 +5,8 @@ import login from '@/services/login'
 
 const Entrar = () => {
   const router = useRouter()
-  const [email, setPass] = useState(null)
-  const [password, setEmail] = useState(null)
+  const [email, setEmail] = useState(null)
+  const [password, setPass] = useState(null)
 
   const handleLogin = async () => {
     const res = await login({ email, password })
