@@ -1,20 +1,20 @@
-const { baseApiUrl, baseApiUrlV2, localApi } =
+const { apiURL } =
   process.env.NODE_ENV !== 'production'
     ? require('./development.env.js')
     : require('./production.env.js')
 
 const env = () => {
   const user = {
-    getUser: `${localApi}user`,
+    getUser: `${apiURL}user`,
   }
 
   const job = {
-    getJobs: `${localApi}jobs/:job`,
-    getCityByJob: `${localApi}cities`,
+    getJobs: `${apiURL}jobs/:job`,
+    getCityByJob: `${apiURL}cities`,
   }
 
-  const login = `${localApi}login`
-  const logout = `${localApi}logout`
+  const login = `${apiURL}login`
+  const logout = `${apiURL}logout`
 
   return {
     api: {
