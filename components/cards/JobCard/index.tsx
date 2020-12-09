@@ -1,4 +1,5 @@
-import { Box, Avatar, Text } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
+import Avatar from '@/components/avatars/avatar'
 import { propsJobCard } from './types'
 import CIcon from '@/components/custom/CIcon'
 
@@ -11,7 +12,7 @@ const JobCard = ({
 }: propsJobCard) => {
   return (
     <Box pos="relative" borderWidth="1px" rounded="lg" p="4">
-      <Avatar mb="4" size="lg" name={companyName} src={avatar} />
+      <Avatar mb="4" alt={companyName} src={avatar} />
 
       <Box
         pos="absolute"
